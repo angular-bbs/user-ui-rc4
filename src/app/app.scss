@@ -1,0 +1,10 @@
+// Global styles
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+// make SVG's default color same as text
+svg {
+  * {
+    fill: currentcolor;
+  }
+}
