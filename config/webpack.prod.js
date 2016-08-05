@@ -16,6 +16,7 @@ const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const AppCachePlugin = require('appcache-webpack-plugin');
 
 /**
  * Webpack Constants
@@ -157,8 +158,8 @@ module.exports = webpackMerge(commonConfig, {
 
 
       beautify: false, //prod
-      mangle: { screw_ie8 : true }, //prod
-      compress: { screw_ie8: true }, //prod
+      mangle: {screw_ie8: true}, //prod
+      compress: {screw_ie8: true}, //prod
       comments: false //prod
     }),
 
@@ -174,6 +175,7 @@ module.exports = webpackMerge(commonConfig, {
       helpers.root('config/modules/angular2-hmr-prod.js')
     ),
 
+    new AppCachePlugin()
     /**
      * Plugin: IgnorePlugin
      * Description: Don’t generate modules for requests matching the provided RegExp.
@@ -206,7 +208,7 @@ module.exports = webpackMerge(commonConfig, {
    */
   tslint: {
     emitErrors: true,
-    failOnHint: true,
+    // failOnHint: true,
     resourcePath: 'src'
   },
 

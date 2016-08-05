@@ -54,7 +54,7 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#entry
    */
   entry: {
-    'main.css': './src/app/app.scss',
+    'index.css': './src/index.scss',
     'polyfills': './src/polyfills.browser.ts',
     'vendor': './src/vendor.browser.ts',
     'main': './src/main.browser.ts'
@@ -138,7 +138,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['awesome-typescript'],
+        loaders: ['awesome-typescript?doTypeCheck=false'],
         exclude: [/\.(spec|e2e)\.ts$/]
       },
       {
@@ -167,23 +167,23 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: [helpers.root('src/app/app.css')],
-        loader: ExtractTextPlugin.extract('css?sourceMap&minimize')
+        include: [helpers.root('src/index.css')],
+        loader: ExtractTextPlugin.extract('css?sourceMap')
       },
       {
         test: /\.css$/,
-        exclude: [helpers.root('src/app/app.css')],
-        loader: 'css-to-string!css?sourceMap&minimize'
+        exclude: [helpers.root('src/index.css')],
+        loader: 'css-to-string!css?sourceMap'
       },
       {
         test: /\.scss$/,
-        include: [helpers.root('src/app/app.scss')],
-        loader: ExtractTextPlugin.extract('css?sourceMap&minimize!sass?sourceMap')
+        include: [helpers.root('src/index.scss')],
+        loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')
       },
       {
         test: /\.scss$/,
-        exclude: [helpers.root('src/app/app.scss')],
-        loader: 'css-to-string!css?sourceMap&minimize!sass?sourceMap'
+        exclude: [helpers.root('src/index.scss')],
+        loader: 'css-to-string!css?sourceMap!sass?sourceMap'
       },
       {
         test: /\.html$/,
@@ -201,7 +201,7 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         exclude: /node_modules/,
-        loader: "url?limit=8092&name=images/[name]_[hash].[ext]"
+        loader: "url?limit=8092&name=images/[hash].[ext]"
       },
       {
         // required for bootstrap icons

@@ -1,10 +1,7 @@
-// Global styles
+:host {
+  display: block;
+}
 
-@import '~bootstrap/scss/bootstrap.scss';
-
-// make SVG's default color same as text
-svg {
-  * {
-    fill: currentcolor;
-  }
+main {
+  padding: 0 1rem;
 }

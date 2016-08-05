@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-image">
+    <img class="circle" [src]="item.avatar">
+  </div>
+  <div class="card-content">
+    <h2 class="card-title">
+      {{item.name}}
+      <small>{{item.bio}}</small>
+    </h2>
+    <div class="description" [innerHTML]="item.description"></div>
+  </div>
+  <div class="card-action">
+    <a [href]="item.homepage" target="_blank">主页</a>
+    <a [routerLink]="['/column/list', {question: item.id}]">专栏</a>
+    <a [routerLink]="['/article/list', {question: item.id}]">文章</a>
+    <a [routerLink]="['/book/list', {question: item.id}]">书籍</a>
+  </div>
+</div>

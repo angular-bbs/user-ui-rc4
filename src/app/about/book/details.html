@@ -1,0 +1,18 @@
+<div class="card">
+  <img class="img-circle" [src]="item.picture">
+  <div class="card-block">
+    <h2 class="card-title">
+      {{item.title}}
+    </h2>
+    <div class="card-text" [innerHTML]="item.description"></div>
+    <hr/>
+    <div>
+      作者：
+      <a *ngFor="let author of item.authors" class="card-link" [routerLink]="['/bbs/author/show', {id: author}]">{{author}}</a>
+    </div>
+    <div>
+      购买：
+      <a *ngFor="let store of item.storeUrls" class="card-link" [href]="store.url" target="_blank">{{store.title}}</a>
+    </div>
+  </div>
+</div>

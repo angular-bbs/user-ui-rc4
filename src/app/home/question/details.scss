@@ -1,0 +1,34 @@
+@import "../../_common/styles/common";
+
+:host {
+  display: block;
+}
+
+.card {
+  margin: 1rem 0 0;
+  box-shadow: none;
+  .card-image {
+    img.circle {
+      width: 50%;
+      display: block;
+      margin: 10px auto;
+      border-radius: 50%;
+      border: 1px solid $gray-lighter;
+    }
+  }
+}
+
+.description {
+  /deep/ {
+    ul {
+      padding-left: 1em;
+      > li {
+        list-style-type: square;
+      }
+    }
+  }
+}
+
+.card-title {
+  margin-top: 0;
+}

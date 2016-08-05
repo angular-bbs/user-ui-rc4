@@ -13,5 +13,5 @@ export class AboutUs implements OnInit {
 
   ngOnInit() {
   }
-  
+
 }

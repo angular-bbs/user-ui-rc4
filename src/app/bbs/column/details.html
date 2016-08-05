@@ -1,0 +1,20 @@
+<div class="card">
+  <img class="img-circle" [src]="item.avatar">
+  <div class="card-block">
+    <h2 class="card-title">
+      {{item.name}}
+      <small>
+        [
+        <a class="author" *ngFor="let author of item.authors" [routerLink]="['/bbs/author/show', author]">{{author}}</a>
+        ]
+      </small>
+    </h2>
+    <h3 class="text-primary">{{item.bio}}</h3>
+    <div class="card-text" [innerHTML]="item.description"></div>
+    <hr/>
+    <p>
+      <a class="card-link" *ngFor="let tag of item.tags"
+         [routerLink]="['/bbs/article', {tag: tag, column: item.id}]">{{tag}}</a>
+    </p>
+  </div>
+</div>

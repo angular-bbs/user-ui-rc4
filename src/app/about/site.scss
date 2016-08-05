@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+ul {
+  padding-left: 1rem;
+  > li {
+    list-style-type: square;
+  }
+}

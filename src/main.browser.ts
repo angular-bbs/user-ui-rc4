@@ -20,7 +20,7 @@ import { App, APP_PROVIDERS } from './app';
  * Bootstrap our Angular app with a top level component `App` and inject
  * our Services and Providers into Angular's dependency injection
  */
-export function main(initialHmrState?: any): Promise<any> {
+export function main(): Promise<any> {
 
   return bootstrap(App, [
     // To add more vendor providers please look in the platform/ folder
