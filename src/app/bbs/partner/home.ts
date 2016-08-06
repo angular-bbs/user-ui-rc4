@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { PartnerApi } from "../../_data/partners/index";
 import { BasePage } from "../../_common/components/base/page";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 import { Partner } from "../../_common/models/partner";
 import { MenuItem } from "../../_common/models/menu-item";
 import { PartnerList } from "./list";

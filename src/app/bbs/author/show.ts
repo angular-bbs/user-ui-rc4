@@ -3,7 +3,7 @@ import { AuthorApi } from "../../_data/authors/index";
 import { ActivatedRoute } from "@angular/router";
 import { Author } from "../../_common/models/author";
 import { BasePage } from "../../_common/components/base/page";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 import { AuthorDetails } from "./details";
 import { matchById } from "../../_common/operators/match-by-id";
 

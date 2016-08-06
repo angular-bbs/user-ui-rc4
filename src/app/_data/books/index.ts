@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Book } from "../../_common/models/book";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 import { Link } from "../../_common/models/link";
 const items: Book[] = [
   {

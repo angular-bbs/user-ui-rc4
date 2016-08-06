@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { BasePage } from "../../_common/components/base/page";
 import { ActivatedRoute } from "@angular/router";
 import { Column } from "../../_common/models/column";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 import { matchById } from "../../_common/operators/match-by-id";
 import { ColumnDetails } from "./details";
 import { ColumnApi } from "../../_data/columns/index";

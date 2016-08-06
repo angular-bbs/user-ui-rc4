@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Author } from "../../_common/models/author";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 const items: Author[] = [
   {
     id: '雪狼',

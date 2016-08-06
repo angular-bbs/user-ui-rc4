@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Showcase } from "../../_common/models/showcase";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 const items: Showcase[] = [
   {
     id: 'iFish',

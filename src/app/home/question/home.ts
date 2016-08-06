@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 import { QuestionList } from "./list";
 import { BasePage } from "../../_common/components/base/page";
 import { QuestionApi } from "../../_data/questions/index";

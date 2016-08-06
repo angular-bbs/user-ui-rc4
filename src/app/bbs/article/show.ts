@@ -3,7 +3,7 @@ import { Article } from "../../_common/models/article";
 import { ActivatedRoute } from "@angular/router";
 import { ArticleApi } from "../../_data/articles/index";
 import { matchById } from "../../_common/operators/match-by-id";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 import { ArticleDetails } from "./details";
 import { BasePage } from "../../_common/components/base/page";
 

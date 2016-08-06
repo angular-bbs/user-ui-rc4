@@ -3,7 +3,7 @@ import { QuestionApi } from "../../_data/questions/index";
 import { ActivatedRoute } from "@angular/router";
 import { Question } from "../../_common/models/question";
 import { BasePage } from "../../_common/components/base/page";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 import { QuestionDetails } from "./details";
 import { matchById } from "../../_common/operators/match-by-id";
 

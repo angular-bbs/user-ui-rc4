@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { BasePage } from "../../_common/components/base/page";
 import { BookApi } from "../../_data/books/index";
 import { ActivatedRoute } from "@angular/router";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 import { Book } from "../../_common/models/book";
 import { matchById } from "../../_common/operators/match-by-id";
 import { BookDetails } from "../book/details";

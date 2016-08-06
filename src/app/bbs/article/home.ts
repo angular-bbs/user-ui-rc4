@@ -4,7 +4,7 @@ import { BasePage } from "../../_common/components/base/page";
 import { ActivatedRoute } from "@angular/router";
 import { ArticleApi } from "../../_data/articles/index";
 import { Article } from "../../_common/models/article";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'article-home',
