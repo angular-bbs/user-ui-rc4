@@ -1,6 +1,6 @@
 {
   "name": "angular-bbs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An open source bbs for programmers based on angular 2",
   "keywords": [
     "angular2",
@@ -146,10 +146,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular-cn/angular-bbs"
+    "url": "https://github.com/angular-bbs/user-ui"
   },
   "bugs": {
-    "url": "https://github.com/angular-cn/angular-bbs/issues"
+    "url": "https://github.com/angular-bbs/user-ui/issues"
   },
   "engines": {
     "node": ">= 4.2.1",
