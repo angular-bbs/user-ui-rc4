@@ -1,18 +1,14 @@
 <div class="card">
   <div class="card-image">
-    <img class="circle" [src]="item.avatar">
+    <img class="circle" [src]="item.picture|trustAsImgUrl">
   </div>
   <div class="card-content">
     <h2 class="card-title">
-      {{item.name}}
-      <small>{{item.bio}}</small>
+      {{item.title}}
+      <small ngFor="let author of item.authors">{{author}}</small>
     </h2>
-    <div class="description" [innerHTML]="item.description"></div>
+    <html-viewer class="card-text" [content]="item.content"></html-viewer>
   </div>
   <div class="card-action">
-    <a [href]="item.homepage" target="_blank">主页</a>
-    <a [routerLink]="['/column/list', {question: item.id}]">专栏</a>
-    <a [routerLink]="['/article/list', {question: item.id}]">文章</a>
-    <a [routerLink]="['/book/list', {question: item.id}]">书籍</a>
   </div>
 </div>

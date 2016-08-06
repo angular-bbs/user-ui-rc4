@@ -1,0 +1,38 @@
+@import "../../styles/common";
+
+:host {
+  display: block;
+  /deep/ {
+    svg {
+      max-width: 100%;
+    }
+    img {
+      max-width: 100%;
+    }
+    ul {
+      padding-left: 1rem;
+      > li {
+        list-style-type: square;
+        > p {
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+    ol {
+      padding-left: 1rem;
+    }
+    h1 {
+      // 不要显示内部的title
+      display: none;
+    }
+    h2, h3, h4, h5, h6 {
+      font-size: 14px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $brand-primary;
+    }
+    h2 {
+      font-size: 16px;
+      color: $brand-primary;
+    }
+  }
+}

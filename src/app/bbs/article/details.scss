@@ -15,24 +15,3 @@
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
-
-.article {
-  /deep/ {
-    img {
-      max-width: 100%;
-    }
-    h1 {
-      // 不要显示内部的title
-      display: none;
-    }
-    h2, h3, h4, h5, h6 {
-      font-size: 14px;
-      padding-bottom: 4px;
-      border-bottom: 1px solid $brand-primary;
-    }
-    h2 {
-      font-size: 16px;
-      color: $brand-primary;
-    }
-  }
-}

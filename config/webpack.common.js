@@ -199,7 +199,7 @@ module.exports = {
         loader: 'html!markup-inline!jade-html'
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(svg|png|jpg|gif)$/,
         exclude: /node_modules/,
         loader: "url?limit=8092&name=images/[hash].[ext]"
       },
@@ -211,11 +211,6 @@ module.exports = {
       {
         test: /\.ttf(\?(.*))?$/,
         loader: 'file?prefix=fonts/'
-      },
-      {
-        test: /\.svg$/,
-        exclude: /node_modules/,
-        loader: 'file'
       },
       {
         test: /\.svg(\?(.*))?$/,

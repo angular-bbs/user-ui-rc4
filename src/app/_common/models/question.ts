@@ -1,5 +1,7 @@
 export interface Question {
   id: string;
+  /** 题图 */
+  picture?: string;
   /** 标题 */
   title: string;
   /** 内容 */

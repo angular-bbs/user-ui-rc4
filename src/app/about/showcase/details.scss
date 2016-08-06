@@ -37,21 +37,6 @@ h3.card-title {
   color: $brand-primary;
 }
 
-.card-text {
-  color: $gray-light;
-  /deep/ {
-    ul {
-      padding-left: 1rem;
-      > li {
-        list-style-type: square;
-        > p {
-          margin-bottom: 0.3rem;
-        }
-      }
-    }
-  }
-}
-
 .card-block {
   padding: 0;
 }

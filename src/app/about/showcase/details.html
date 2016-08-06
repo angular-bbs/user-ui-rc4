@@ -1,6 +1,6 @@
 <div class="card">
   <div class="img-circle">
-    <img [src]="item.picture">
+    <img [src]="item.picture|trustAsImgUrl">
   </div>
   <div class="card-block">
     <h2 class="card-title">
@@ -15,6 +15,6 @@
     <p *ngIf="item.url">
       发布：<a [href]="item.url" target="_blank">{{item.url}}</a>
     </p>
-    <div class="card-text" [innerHTML]="item.description"></div>
+    <html-viewer class="card-text" [content]="item.description"></html-viewer>
   </div>
 </div>

@@ -14,6 +14,6 @@
   <a [href]="item.originalUrl">点此查看原文</a>
 </p>
 
-<div class="summary" *ngIf="item.summary" [innerHTML]="item.summary"></div>
+<html-viewer class="summary" *ngIf="item.summary" [content]="item.summary"></html-viewer>
 
-<div class="article" [innerHTML]="item.content"></div>
+<html-viewer [content]="item.content"></html-viewer>

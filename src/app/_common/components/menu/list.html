@@ -2,7 +2,7 @@
   <a *ngFor="let item of items" [routerLink]="item.url" class="list-group-item list-group-item-action">
     <div class="media">
       <div class="media-left">
-        <img [src]="item.icon" [alt]="item.title" class="media-object">
+        <img [src]="item.icon|trustAsImgUrl" [alt]="item.title" class="media-object">
       </div>
       <div class="media-body">
         <h3 class="media-heading">

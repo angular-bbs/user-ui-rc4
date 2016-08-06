@@ -18,17 +18,6 @@
   }
 }
 
-.description {
-  /deep/ {
-    ul {
-      padding-left: 1em;
-      > li {
-        list-style-type: square;
-      }
-    }
-  }
-}
-
 .card-title {
   margin-top: 0;
 }

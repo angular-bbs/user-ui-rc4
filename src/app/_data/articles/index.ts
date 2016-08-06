@@ -26,7 +26,7 @@ const items: Article[] = [
   {
     id: '一‘括’抵千言……Angular 2中的绑定',
     title: '一‘括’抵千言……Angular 2中的绑定',
-    summary: 'Angular 2提供了空前强大的数据绑定语法。它直接代替了Angular 1中的60多个内置指令，以及无数的自定义指令，本文为您讲解强大的绑定',
+    summary: 'Angular 2提供了空前强大的数据绑定语法。它直接代替了Angular 1中的五十多个内置指令，以及无数的自定义指令，本文为您讲解强大的绑定',
     content: require('./30.一括抵千言……Angular 2中的绑定.md'),
     first: true,
     column: '雪狼湖',

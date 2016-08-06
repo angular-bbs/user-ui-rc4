@@ -1,5 +1,5 @@
 <div class="card">
-  <img class="img-circle" [src]="item.avatar">
+  <img class="img-circle" [src]="item.avatar|trustAsImgUrl">
   <div class="card-block">
     <h2 class="card-title">
       {{item.name}}
@@ -10,7 +10,7 @@
       </small>
     </h2>
     <h3 class="text-primary">{{item.bio}}</h3>
-    <div class="card-text" [innerHTML]="item.description"></div>
+    <html-viewer class="card-text" [content]="item.description"></html-viewer>
     <hr/>
     <p>
       <a class="card-link" *ngFor="let tag of item.tags"
