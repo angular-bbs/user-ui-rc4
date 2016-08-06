@@ -232,6 +232,7 @@ module.exports = {
     preset: 'default',
     typographer: true,
     use: [
+      require('markdown-it-highlightjs'),
       require('markdown-it-sub'),
       require('markdown-it-sup'),
       require('markdown-it-abbr'),

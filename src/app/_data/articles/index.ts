@@ -53,6 +53,16 @@ const items: Article[] = [
     tags: ['现在', '烧脑'],
     authors: ['雪狼']
   },
+  {
+    id: '表单的救赎',
+    title: '表单的救赎',
+    summary: '表单处理工作有多复杂，每个前端以及每个后端都心知肚明，而Angular 2的到来，将让表单处理代码呈现出一种新的风貌',
+    content: require('./60.表单的救赎.md'),
+    first: true,
+    column: '雪狼湖',
+    tags: ['现在', '烧脑'],
+    authors: ['雪狼']
+  },
 ];
 
 @Injectable()
