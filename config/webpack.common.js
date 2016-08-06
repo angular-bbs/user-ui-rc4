@@ -57,7 +57,8 @@ module.exports = {
     'index.css': './src/index.scss',
     'polyfills': './src/polyfills.browser.ts',
     'vendor': './src/vendor.browser.ts',
-    'main': './src/main.browser.ts'
+    'main': './src/main.browser.ts',
+    'data': './src/data.ts'
 
   },
 
@@ -276,7 +277,7 @@ module.exports = {
      * See: https://github.com/webpack/docs/wiki/optimization#multi-page-app
      */
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['polyfills', 'vendor'].reverse()
+      name: ['polyfills', 'vendor', 'data'].reverse()
     }),
 
     /*

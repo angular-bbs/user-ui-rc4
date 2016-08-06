@@ -1,0 +1,9 @@
+import './app/_data/articles/index';
+import './app/_data/authors/index';
+import './app/_data/books/index';
+import './app/_data/columns/index';
+import './app/_data/news/index';
+import './app/_data/partners/index';
+import './app/_data/questions/index';
+import './app/_data/resources/index';
+import './app/_data/showcases/index';

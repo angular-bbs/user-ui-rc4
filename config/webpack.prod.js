@@ -175,7 +175,11 @@ module.exports = webpackMerge(commonConfig, {
       helpers.root('config/modules/angular2-hmr-prod.js')
     ),
 
-    // new AppCachePlugin()
+    new AppCachePlugin({
+      exclude: ['.*\.map', 'assets/icon/.*'],
+      settings: ['prefer-offline'],
+      network: ['api/*']
+    })
     /**
      * Plugin: IgnorePlugin
      * Description: Don’t generate modules for requests matching the provided RegExp.
