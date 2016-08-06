@@ -176,7 +176,7 @@ module.exports = webpackMerge(commonConfig, {
     ),
 
     new AppCachePlugin({
-      exclude: ['.*\.map', 'assets/icon/.*'],
+      exclude: ['.*\.map'],
       settings: ['prefer-offline'],
       network: ['api/*']
     })

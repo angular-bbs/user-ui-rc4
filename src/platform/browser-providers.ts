@@ -9,7 +9,7 @@ import { HTTP_PROVIDERS } from '@angular/http';
 // Angular 2 Router
 import { provideRouter } from '@angular/router';
 // Angular 2 forms
-import { disableDeprecatedForms, provideForms } from '@angular/forms';
+import { provideForms } from '@angular/forms';
 
 import { routes } from '../app/app.routes';
 import { APP_RESOLVER_PROVIDERS } from '../app/app.resolver';
@@ -19,7 +19,6 @@ import { APP_RESOLVER_PROVIDERS } from '../app/app.resolver';
 */
 export const APPLICATION_PROVIDERS = [
   // new Angular 2 forms
-  disableDeprecatedForms(),
   provideForms(),
 
   ...APP_RESOLVER_PROVIDERS,
