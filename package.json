@@ -108,6 +108,7 @@
     "karma-mocha-reporter": "^2.0.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "1.7.0",
+    "lodash": "^4.14.1",
     "markdown-it-abbr": "^1.0.3",
     "markdown-it-container": "^2.0.0",
     "markdown-it-deflist": "^2.0.1",

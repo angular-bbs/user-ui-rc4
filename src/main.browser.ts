@@ -15,6 +15,7 @@ import { ENV_PROVIDERS, decorateComponentRef } from './platform/environment';
 * our top level component that holds all of our components
 */
 import { App, APP_PROVIDERS } from './app';
+import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
@@ -27,6 +28,7 @@ export function main(): Promise<any> {
     ...PLATFORM_PROVIDERS,
     ...ENV_PROVIDERS,
     ...APP_PROVIDERS,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ])
   .then(decorateComponentRef)
   .catch(err => console.error(err));
