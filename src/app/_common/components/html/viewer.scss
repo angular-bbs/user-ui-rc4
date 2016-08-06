@@ -3,6 +3,10 @@
 :host {
   display: block;
   /deep/ {
+    blockquote {
+      padding-left: 1rem;
+      border-left: 2px solid $brand-primary;
+    }
     svg {
       max-width: 100%;
     }
@@ -32,7 +36,7 @@
     }
     h2 {
       font-size: 16px;
-      color: $brand-primary;
+      color: $brand-inverse;
     }
   }
 }
