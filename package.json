@@ -81,7 +81,6 @@
   "devDependencies": {
     "angular2-hmr": "~0.8.1",
     "angular2-template-loader": "^0.4.0",
-    "appcache-webpack-plugin": "^1.3.0",
     "awesome-typescript-loader": "1.1.1",
     "codelyzer": "~0.0.25",
     "copy-webpack-plugin": "^3.0.1",

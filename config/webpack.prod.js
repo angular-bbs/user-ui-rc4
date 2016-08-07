@@ -16,7 +16,6 @@ const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const AppCachePlugin = require('appcache-webpack-plugin');
 
 /**
  * Webpack Constants
@@ -174,12 +173,6 @@ module.exports = webpackMerge(commonConfig, {
       /angular2-hmr/,
       helpers.root('config/modules/angular2-hmr-prod.js')
     ),
-
-    new AppCachePlugin({
-      exclude: ['.*\.map'],
-      settings: ['prefer-offline'],
-      network: ['api/*']
-    })
     /**
      * Plugin: IgnorePlugin
      * Description: Don’t generate modules for requests matching the provided RegExp.
