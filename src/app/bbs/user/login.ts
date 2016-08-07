@@ -34,7 +34,7 @@ export class UserLogin implements OnInit, OnDestroy {
           code: code,
           redirect_url: this.router.serializeUrl(this.router.createUrlTree(['/bbs/user/login']))
         }).subscribe((data)=> {
-          this.name = data.text();
+          this.name = data.json().name;
         }, (err)=> {
           console.error(err);
         });
