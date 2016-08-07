@@ -1,8 +1,8 @@
 <h2 class="title">{{item.title}}</h2>
 
 <p class="author">
-  <a *ngFor="let author of item.authors" [routerLink]="['/bbs/author/show', author]">{{author}}</a>
-  <a *ngFor="let translator of item.translators" [routerLink]="['/bbs/author/show', translator]">[译]{{translator}}</a>
+  <a *ngFor="let author of item.authors" [routerLink]="['/library/author/show', author]">{{author}}</a>
+  <a *ngFor="let translator of item.translators" [routerLink]="['/library/author/show', translator]">[译]{{translator}}</a>
   <label *ngIf="item.translation">译作</label>
   <label *ngIf="item.exclusive">独家</label>
   <label *ngIf="item.first">首发</label>

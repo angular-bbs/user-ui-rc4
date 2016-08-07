@@ -33,3 +33,28 @@ ol {
 ul {
   padding-left: 1rem;
 }
+
+.nav.nav-simple {
+  @include clearfix();
+  .nav-link {
+    display: block;
+    padding: .5em 1em;
+    border-radius: 0;
+  }
+  .nav-item {
+    float: left;
+    & + .nav-item {
+      margin-left: 0;
+    }
+    .nav-link {
+      text-align: center;
+      cursor: default;
+      &.active {
+        color: $brand-inverse;
+        background: none;
+        border-bottom: 2px solid $brand-inverse;
+        border-radius: 0;
+      }
+    }
+  }
+}

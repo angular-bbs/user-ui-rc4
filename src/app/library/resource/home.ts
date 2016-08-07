@@ -34,6 +34,6 @@ function resourceToMenuItem(resource: Article): MenuItem {
     title: resource.title,
     icon: resource.image,
     description: resource.summary,
-    url: `/bbs/resource/show/${resource.id}`
+    url: `/library/resource/show/${resource.id}`
   }
 }

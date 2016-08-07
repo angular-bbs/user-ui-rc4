@@ -3,42 +3,76 @@ import { NoContent } from "./no-content";
 import { AboutHome } from "./about/home";
 import { AboutUs } from "./about/us";
 import { AboutJoin } from "./about/join";
-import { BbsHome } from "./bbs/home";
+import { LibraryHome } from "./library/home";
 import { BookShow } from "./about/book/show";
-import { QuestionHome } from "./home/question/home";
-import { QuestionShow } from "./home/question/show";
-import { UserCreate } from "./home/user/create";
-import { ArticleShow } from "./bbs/article/show";
-import { ColumnShow } from "./bbs/column/show";
-import { NewsHome } from "./bbs/news/home";
-import { NewsShow } from "./bbs/news/show";
-import { NewsTrend } from "./bbs/news/trend";
-import { AuthorHome } from "./bbs/author/home";
-import { AuthorShow } from "./bbs/author/show";
-import { QuestionCreate } from "./home/question/create";
-import { ArticleHome } from "./bbs/article/home";
-import { ColumnHome } from "./bbs/column/home";
-import { ResourceHome } from "./bbs/resource/home";
-import { ResourceShow } from "./bbs/resource/show";
-import { PartnerShow } from "./bbs/partner/show";
-import { PartnerHome } from "./bbs/partner/home";
+import { QuestionShow } from "./bbs/question/show";
+import { UserCreate } from "./bbs/user/create";
+import { ArticleShow } from "./library/article/show";
+import { ColumnShow } from "./library/column/show";
+import { NewsHome } from "./library/news/home";
+import { NewsShow } from "./library/news/show";
+import { NewsTrend } from "./library/news/trend";
+import { AuthorHome } from "./library/author/home";
+import { AuthorShow } from "./library/author/show";
+import { QuestionCreate } from "./bbs/question/create";
+import { ArticleHome } from "./library/article/home";
+import { ColumnHome } from "./library/column/home";
+import { ResourceHome } from "./library/resource/home";
+import { ResourceShow } from "./library/resource/show";
+import { PartnerShow } from "./library/partner/show";
+import { PartnerHome } from "./library/partner/home";
 import { AboutSite } from "./about/site";
 import { BookHome } from "./about/book/home";
 import { ShowcaseHome } from "./about/showcase/home";
 import { ShowcaseShow } from "./about/showcase/show";
+import { BbsHome } from "./bbs/home";
+import { BbsHot } from "./bbs/hot/home";
+import { BbsMine } from "./bbs/mine/home";
+import { BbsLatest } from "./bbs/latest/home";
+import { BbsReward } from "./bbs/reward/home";
 
 export const routes: RouterConfig = [
-  {path: '', pathMatch: 'full', redirectTo: '/home/question',},
+  {path: '', pathMatch: 'full', redirectTo: '/bbs',},
   {
-    path: 'home',
+    path: 'bbs', component: BbsHome,
     children: [
-      {path: '', pathMatch: 'full', redirectTo: '/home/question'},
+      {
+        path: '', pathMatch: 'full', redirectTo: '/bbs/mine'
+      },
       {
         path: 'question',
         children: [
           {path: '', pathMatch: 'full', component: QuestionCreate},
           {path: 'show/:id', component: QuestionShow},
           {path: 'create', component: QuestionCreate},
+        ]
+      },
+      {
+        path: 'mine',
+        children: [
+          {path: '', component: BbsMine},
+          {path: 'show/:id', component: QuestionShow},
+        ]
+      },
+      {
+        path: 'hot',
+        children: [
+          {path: '', component: BbsHot},
+          {path: 'show/:id', component: QuestionShow},
+        ]
+      },
+      {
+        path: 'latest',
+        children: [
+          {path: '', component: BbsLatest},
+          {path: 'show/:id', component: QuestionShow},
+        ]
+      },
+      {
+        path: 'reward',
+        children: [
+          {path: '', component: BbsReward},
+          {path: 'show/:id', component: QuestionShow},
         ]
       },
       {
@@ -73,9 +107,9 @@ export const routes: RouterConfig = [
     ]
   },
   {
-    path: 'bbs',
+    path: 'library',
     children: [
-      {path: '', pathMatch: 'full', component: BbsHome},
+      {path: '', pathMatch: 'full', component: LibraryHome},
       {
         path: 'article',
         children: [

@@ -1,6 +1,11 @@
-<div class="alert alert-info">
-  欢迎到
-  <a href="https://github.com/angular-bbs/user-ui" target="_blank">Github</a>
-  发Pull Request进行投稿，共同为社区做贡献。
-</div>
-<menu-list [items]="items"></menu-list>
+<nav>
+  <ul class="nav nav-simple padding-h-neg">
+    <li class="nav-item"><a routerLink="./mine" class="nav-link" routerLinkActive="active">我的社区</a></li>
+    <li class="nav-item"><a routerLink="./latest" class="nav-link" routerLinkActive="active">最新问题</a></li>
+    <li class="nav-item"><a routerLink="./hot" class="nav-link" routerLinkActive="active">热门问题</a></li>
+    <li class="nav-item"><a routerLink="./reward" class="nav-link" routerLinkActive="active">悬赏问题</a></li>
+  </ul>
+</nav>
+
+社区正在建设中，请稍候……
+<router-outlet></router-outlet>

@@ -34,6 +34,6 @@ function newsToMenuItem(news: Article): MenuItem {
     title: news.title,
     icon: news.image,
     description: news.summary,
-    url: `/bbs/news/show/${news.id}`
+    url: `/library/news/show/${news.id}`
   }
 }

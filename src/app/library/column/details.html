@@ -5,7 +5,7 @@
       {{item.name}}
       <small>
         [
-        <a class="author" *ngFor="let author of item.authors" [routerLink]="['/bbs/author/show', author]">{{author}}</a>
+        <a class="author" *ngFor="let author of item.authors" [routerLink]="['/library/author/show', author]">{{author}}</a>
         ]
       </small>
     </h2>
@@ -14,7 +14,7 @@
     <hr/>
     <p>
       <a class="card-link" *ngFor="let tag of item.tags"
-         [routerLink]="['/bbs/article', {tag: tag, column: item.id}]">{{tag}}</a>
+         [routerLink]="['/library/article', {tag: tag, column: item.id}]">{{tag}}</a>
     </p>
   </div>
 </div>

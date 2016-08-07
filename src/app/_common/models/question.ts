@@ -8,4 +8,8 @@ export interface Question {
   content: string;
   /** 作者id */
   authors: string[];
+  /** 内容标签，tag */
+  tags?: string[];
+  /** 分类标签，类似于Github的分类 */
+  labels?: string[];
 }

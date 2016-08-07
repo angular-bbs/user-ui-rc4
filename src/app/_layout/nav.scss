@@ -4,20 +4,8 @@
   display: block;
 }
 
-.nav-pills {
+.nav {
   .nav-item {
-    width: 33.33%;
-    & + .nav-item {
-      margin-left: 0;
-    }
-    .nav-link {
-      text-align: center;
-      &.active {
-        color: $brand-inverse;
-        background: none;
-        border-bottom: 2px solid $brand-inverse;
-        border-radius: 0;
-      }
-    }
+    width: 33%;
   }
 }
