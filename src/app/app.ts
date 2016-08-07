@@ -9,6 +9,7 @@ import { QuestionApi } from "./_data/questions/index";
 import { ResourceApi } from "./_data/resources/index";
 import { PartnerApi } from "./_data/partners/index";
 import { ShowcaseApi } from "./_data/showcases/index";
+import { Auth } from "./_common/services/auth";
 
 @Component({
   selector: 'app',
@@ -17,7 +18,7 @@ import { ShowcaseApi } from "./_data/showcases/index";
     require('./app.scss')
   ],
   directives: [LayoutNav],
-  providers: [ColumnApi, AuthorApi, ArticleApi, BookApi, NewsApi, QuestionApi, ResourceApi, PartnerApi, ShowcaseApi]
+  providers: [ColumnApi, AuthorApi, ArticleApi, BookApi, NewsApi, QuestionApi, ResourceApi, PartnerApi, ShowcaseApi, Auth]
 })
 export class App {
   constructor() {

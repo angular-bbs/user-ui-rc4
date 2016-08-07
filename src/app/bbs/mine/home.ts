@@ -5,6 +5,7 @@ import { Observable } from "rxjs/Observable";
 import { QuestionList } from "../question/list";
 import { QuestionApi } from "../../_data/questions/index";
 import { Question } from "../../_common/models/question";
+import { Auth } from "../../_common/services/auth";
 
 @Component({
   selector: 'bbs-mine',
@@ -15,7 +16,7 @@ import { Question } from "../../_common/models/question";
   directives: [QuestionList]
 })
 export class BbsMine extends BasePage {
-  constructor(activatedRoute: ActivatedRoute, private api: QuestionApi) {
+  constructor(activatedRoute: ActivatedRoute, private api: QuestionApi, private auth: Auth) {
     super(activatedRoute);
   }
 

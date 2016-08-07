@@ -30,6 +30,7 @@ import { BbsHot } from "./bbs/hot/home";
 import { BbsMine } from "./bbs/mine/home";
 import { BbsLatest } from "./bbs/latest/home";
 import { BbsReward } from "./bbs/reward/home";
+import { UserLogin } from "./bbs/user/login";
 
 export const routes: RouterConfig = [
   {path: '', pathMatch: 'full', redirectTo: '/bbs',},
@@ -79,6 +80,7 @@ export const routes: RouterConfig = [
         path: 'user',
         children: [
           {path: 'create', component: UserCreate},
+          {path: 'login', component: UserLogin},
         ]
       },
     ]

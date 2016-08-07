@@ -5,7 +5,7 @@ import { StringMap } from "../../utils/index";
 
 @Component({})
 export abstract class BasePage implements OnInit, OnDestroy {
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(protected activatedRoute: ActivatedRoute) {
   }
 
   activatedRouteSubscription: Subscription;
