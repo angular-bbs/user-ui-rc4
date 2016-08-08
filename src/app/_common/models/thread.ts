@@ -1,3 +1,4 @@
+import { Article } from "./article";
 export interface Thread {
   id: string;
   /** 题图 */
@@ -12,4 +13,6 @@ export interface Thread {
   tags?: string[];
   /** 分类标签，类似于Github的分类 */
   labels?: string[];
+  /** 帖子的回复 */
+  comments?: Article[];
 }

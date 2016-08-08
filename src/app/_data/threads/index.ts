@@ -8,14 +8,21 @@ const items: Thread[] = [
     picture: require('./_images/wizard.svg'),
     content: require('./10.欢迎您！陌生的旅者.md'),
     authors: ['雪狼', '叶志敏'],
-    labels: ['mine', 'hot', 'latest'],
+    labels: ['hot', 'latest'],
   },
   {
     id: '2',
     title: '悬赏！哥德巴赫猜想',
     content: require('./20.悬赏！哥德巴赫猜想.md'),
     authors: ['雪狼'],
-    labels: ['mine', 'hot', 'latest', 'reward'],
+    labels: ['latest', 'reward'],
+  },
+  {
+    id: '3',
+    title: 'Angular 2路由问题',
+    content: require('./30.Angular 2路由问题.md'),
+    authors: ['雪狼'],
+    labels: [],
   },
 ];
 @Injectable()

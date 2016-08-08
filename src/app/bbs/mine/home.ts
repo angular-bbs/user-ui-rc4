@@ -23,13 +23,13 @@ export class BbsMine extends BasePage {
 
   reload(params): void {
     this.items = this.api.items
-      .filter(matchByLabel('mine'))
+      .filter(matchByAuthor('雪狼'))
       .toArray();
   }
 }
 
-function matchByLabel(label: string): (item)=>boolean {
+function matchByAuthor(author: string): (item)=>boolean {
   return (item)=> {
-    return !label || item.labels.indexOf(label) !== -1
+    return !author || item.authors.indexOf(author) !== -1
   }
 }

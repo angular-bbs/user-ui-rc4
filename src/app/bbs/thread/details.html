@@ -1,7 +1,7 @@
 <h2 class="title">
   {{item.title}}
   <small class="pull-xs-right">
-    <a *ngFor="let author of item.authors" [routerLink]="['/library/author/show', author]">{{author}}</a>
+    <a class="tag tag-info" *ngFor="let author of item.authors" [routerLink]="['/library/author/show', author]">{{author}}</a>
   </small>
 </h2>
 
