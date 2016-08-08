@@ -5,7 +5,7 @@ import { ArticleApi } from "./_data/articles/index";
 import { BookApi } from "./_data/books/index";
 import { ColumnApi } from "./_data/columns/index";
 import { NewsApi } from "./_data/news/index";
-import { QuestionApi } from "./_data/questions/index";
+import { ThreadApi } from "./_data/threads/index";
 import { ResourceApi } from "./_data/resources/index";
 import { PartnerApi } from "./_data/partners/index";
 import { ShowcaseApi } from "./_data/showcases/index";
@@ -18,7 +18,7 @@ import { Auth } from "./_common/services/auth";
     require('./app.scss')
   ],
   directives: [LayoutNav],
-  providers: [ColumnApi, AuthorApi, ArticleApi, BookApi, NewsApi, QuestionApi, ResourceApi, PartnerApi, ShowcaseApi, Auth]
+  providers: [ColumnApi, AuthorApi, ArticleApi, BookApi, NewsApi, ThreadApi, ResourceApi, PartnerApi, ShowcaseApi, Auth]
 })
 export class App {
   constructor() {

@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Question } from "../../_common/models/question";
+import { Thread } from "../../_common/models/thread";
 import { HtmlViewer } from "../../_common/components/html/viewer";
 import { TrustAsImgUrlPipe } from "../../_common/pipes/trust-as-img-url";
 
 @Component({
-  selector: 'question-details',
+  selector: 'thread-details',
   template: require('./details.html'),
   styles: [
     require('./details.scss')
@@ -12,8 +12,8 @@ import { TrustAsImgUrlPipe } from "../../_common/pipes/trust-as-img-url";
   directives: [HtmlViewer],
   pipes: [TrustAsImgUrlPipe]
 })
-export class QuestionDetails implements OnInit {
-  @Input() item: Question;
+export class ThreadDetails implements OnInit {
+  @Input() item: Thread;
 
   constructor() {
   }
