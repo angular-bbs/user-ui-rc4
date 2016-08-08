@@ -1,18 +1,18 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Question } from "../../_common/models/question";
+import { Thread } from "../../_common/models/thread";
 
 @Component({
-  selector: 'question-list',
+  selector: 'thread-list',
   template: require('./list.html'),
   styles: [
     require('./list.scss')
   ]
 })
-export class QuestionList implements OnInit {
+export class ThreadList implements OnInit {
   constructor() {
   }
 
-  @Input() items: Question[];
+  @Input() items: Thread[];
 
   ngOnInit() {
   }

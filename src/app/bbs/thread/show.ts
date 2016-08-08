@@ -1,26 +1,26 @@
 import { Component } from "@angular/core";
-import { QuestionApi } from "../../_data/questions/index";
+import { ThreadApi } from "../../_data/threads/index";
 import { ActivatedRoute } from "@angular/router";
-import { Question } from "../../_common/models/question";
+import { Thread } from "../../_common/models/thread";
 import { BasePage } from "../../_common/components/base/page";
 import { Observable } from "rxjs/Observable";
-import { QuestionDetails } from "./details";
+import { ThreadDetails } from "./details";
 import { matchById } from "../../_common/operators/match-by-id";
 
 @Component({
-  selector: 'question-show',
+  selector: 'thread-show',
   template: require('./show.html'),
   styles: [
     require('./show.scss')
   ],
-  directives: [QuestionDetails]
+  directives: [ThreadDetails]
 })
-export class QuestionShow extends BasePage {
-  constructor(private api: QuestionApi, activatedRoute: ActivatedRoute) {
+export class ThreadShow extends BasePage {
+  constructor(private api: ThreadApi, activatedRoute: ActivatedRoute) {
     super(activatedRoute);
   }
 
-  item: Observable<Question>;
+  item: Observable<Thread>;
 
   reload(params) {
     this.item = this.api.items

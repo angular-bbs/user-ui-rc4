@@ -1,4 +1,4 @@
-export interface Question {
+export interface Thread {
   id: string;
   /** 题图 */
   picture?: string;

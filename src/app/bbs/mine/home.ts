@@ -2,10 +2,9 @@ import { Component } from "@angular/core";
 import { BasePage } from "../../_common/components/base/page";
 import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs/Observable";
-import { QuestionList } from "../question/list";
-import { QuestionApi } from "../../_data/questions/index";
-import { Question } from "../../_common/models/question";
-import { Auth } from "../../_common/services/auth";
+import { ThreadList } from "../thread/list";
+import { ThreadApi } from "../../_data/threads/index";
+import { Thread } from "../../_common/models/thread";
 
 @Component({
   selector: 'bbs-mine',
@@ -13,14 +12,14 @@ import { Auth } from "../../_common/services/auth";
   styles: [
     require('./home.scss')
   ],
-  directives: [QuestionList]
+  directives: [ThreadList]
 })
 export class BbsMine extends BasePage {
-  constructor(activatedRoute: ActivatedRoute, private api: QuestionApi, private auth: Auth) {
+  constructor(activatedRoute: ActivatedRoute, private api: ThreadApi) {
     super(activatedRoute);
   }
 
-  items: Observable<Question[]>;
+  items: Observable<Thread[]>;
 
   reload(params): void {
     this.items = this.api.items

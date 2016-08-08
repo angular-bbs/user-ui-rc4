@@ -1,17 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'user-create',
+  selector: 'thread-create',
   template: require('./create.html'),
   styles: [
     require('./create.scss')
   ]
 })
-export class UserCreate implements OnInit {
+export class ThreadCreate implements OnInit {
   constructor() {
   }
 
   ngOnInit() {
   }
-  
+
 }

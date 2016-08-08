@@ -5,8 +5,7 @@ import { AboutUs } from "./about/us";
 import { AboutJoin } from "./about/join";
 import { LibraryHome } from "./library/home";
 import { BookShow } from "./about/book/show";
-import { QuestionShow } from "./bbs/question/show";
-import { UserCreate } from "./bbs/user/create";
+import { ThreadShow } from "./bbs/thread/show";
 import { ArticleShow } from "./library/article/show";
 import { ColumnShow } from "./library/column/show";
 import { NewsHome } from "./library/news/home";
@@ -14,7 +13,7 @@ import { NewsShow } from "./library/news/show";
 import { NewsTrend } from "./library/news/trend";
 import { AuthorHome } from "./library/author/home";
 import { AuthorShow } from "./library/author/show";
-import { QuestionCreate } from "./bbs/question/create";
+import { ThreadCreate } from "./bbs/thread/create";
 import { ArticleHome } from "./library/article/home";
 import { ColumnHome } from "./library/column/home";
 import { ResourceHome } from "./library/resource/home";
@@ -31,9 +30,10 @@ import { BbsMine } from "./bbs/mine/home";
 import { BbsLatest } from "./bbs/latest/home";
 import { BbsReward } from "./bbs/reward/home";
 import { UserLogin } from "./bbs/user/login";
+import { UserHome } from "./bbs/user/home";
 
 export const routes: RouterConfig = [
-  {path: '', pathMatch: 'full', redirectTo: '/bbs',},
+  {path: '', pathMatch: 'full', redirectTo: '/bbs/mine',},
   {
     path: 'bbs', component: BbsHome,
     children: [
@@ -41,45 +41,45 @@ export const routes: RouterConfig = [
         path: '', pathMatch: 'full', redirectTo: '/bbs/mine'
       },
       {
-        path: 'question',
+        path: 'thread',
         children: [
-          {path: '', pathMatch: 'full', component: QuestionCreate},
-          {path: 'show/:id', component: QuestionShow},
-          {path: 'create', component: QuestionCreate},
+          {path: '', pathMatch: 'full', component: ThreadCreate},
+          {path: 'show/:id', component: ThreadShow},
+          {path: 'create', component: ThreadCreate},
         ]
       },
       {
         path: 'mine',
         children: [
           {path: '', component: BbsMine},
-          {path: 'show/:id', component: QuestionShow},
+          {path: 'show/:id', component: ThreadShow},
         ]
       },
       {
         path: 'hot',
         children: [
           {path: '', component: BbsHot},
-          {path: 'show/:id', component: QuestionShow},
+          {path: 'show/:id', component: ThreadShow},
         ]
       },
       {
         path: 'latest',
         children: [
           {path: '', component: BbsLatest},
-          {path: 'show/:id', component: QuestionShow},
+          {path: 'show/:id', component: ThreadShow},
         ]
       },
       {
         path: 'reward',
         children: [
           {path: '', component: BbsReward},
-          {path: 'show/:id', component: QuestionShow},
+          {path: 'show/:id', component: ThreadShow},
         ]
       },
       {
         path: 'user',
         children: [
-          {path: 'create', component: UserCreate},
+          {path: '', component: UserHome},
           {path: 'login', component: UserLogin},
         ]
       },
