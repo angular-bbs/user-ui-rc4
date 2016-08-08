@@ -26,4 +26,6 @@ export interface Article {
   tags?: string[];
   /** 原地址 */
   originalUrl?: string;
+  /** 是否隐藏 */
+  hidden?: boolean;
 }
