@@ -23,7 +23,7 @@ export class ThreadHome extends BasePage {
   items: Observable<Thread[]>;
 
   reload(params) {
-    this.items = this.api.items
+    this.items = this.api.query()
       .find(matchById(params.id))
       .toArray();
   }

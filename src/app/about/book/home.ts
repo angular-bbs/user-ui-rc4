@@ -23,7 +23,7 @@ export class BookHome extends BasePage {
   items: Observable<MenuItem[]>;
 
   reload(params): void {
-    this.items = this.api.items
+    this.items = this.api.query()
       .map(bookToMenuItem)
       .toArray();
   }

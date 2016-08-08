@@ -7,11 +7,13 @@ const items: Showcase[] = [
     title: 'iFish',
     author: 'ThoughtWorks',
     customer: '智渔科技',
-    description: require('./ifish.md'),
+    description: require('./10.ifish.md'),
     picture: require('./_images/ifish.svg'),
   }
 ];
 @Injectable()
 export class ShowcaseApi {
-  items: Observable<Showcase> = Observable.from(items);
+  query(params = {}): Observable<Showcase> {
+    return Observable.from(items);
+  }
 }

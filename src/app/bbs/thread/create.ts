@@ -1,4 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Http } from "@angular/http";
+import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'thread-create',
@@ -8,7 +10,7 @@ import {Component, OnInit} from '@angular/core';
   ]
 })
 export class ThreadCreate implements OnInit {
-  constructor() {
+  constructor(private http: Http) {
   }
 
   ngOnInit() {

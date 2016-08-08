@@ -23,7 +23,7 @@ export class ShowcaseHome extends BasePage {
   items: Observable<MenuItem[]>;
 
   reload(params): void {
-    this.items = this.api.items
+    this.items = this.api.query()
       .map(showcaseToMenuItem)
       .toArray();
   }

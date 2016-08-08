@@ -16,5 +16,7 @@ const items: Column[] = [
 
 @Injectable()
 export class ColumnApi {
-  items: Observable<Column> = Observable.from(items);
+  query(params = {}): Observable<Column> {
+    return Observable.from(items);
+  }
 }

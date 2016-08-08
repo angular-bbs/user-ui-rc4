@@ -6,7 +6,7 @@ const items: Author[] = [
     id: '雪狼',
     name: '雪狼',
     bio: '好为人师，好为人师',
-    description: require('./雪狼.md'),
+    description: require('./10.雪狼.md'),
     avatar: require('./_images/雪狼.jpg'),
     columnist: true,
     homepage: 'https://github.com/asnowwolf/'
@@ -14,5 +14,7 @@ const items: Author[] = [
 ];
 @Injectable()
 export class AuthorApi {
-  items: Observable<Author> = Observable.from(items);
+  query(params = {}): Observable<Author> {
+    return Observable.from(items);
+  }
 }

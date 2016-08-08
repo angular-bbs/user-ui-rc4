@@ -27,5 +27,7 @@ const items: Thread[] = [
 ];
 @Injectable()
 export class ThreadApi {
-  items: Observable<Thread> = Observable.from(items);
+  query(): Observable<Thread> {
+    return Observable.from(items)
+  };
 }

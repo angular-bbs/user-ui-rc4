@@ -23,6 +23,6 @@ export class ArticleShow extends BasePage {
   item: Observable<Article>;
 
   reload(params) {
-    this.item = this.api.items.find(matchById(params.id));
+    this.item = this.api.query().find(matchById(params.id));
   }
 }

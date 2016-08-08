@@ -23,7 +23,7 @@ export class BookShow extends BasePage {
   item: Observable<Book>;
 
   reload(params): void {
-    this.item = this.api.items
+    this.item = this.api.query()
       .find(matchById(params.id));
   }
 }

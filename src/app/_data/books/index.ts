@@ -16,5 +16,7 @@ const items: Book[] = [
 ];
 @Injectable()
 export class BookApi {
-  items: Observable<Book> = Observable.from(items);
+  query(params): Observable<Book> {
+    return Observable.from(items);
+  }
 }

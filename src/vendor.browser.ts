@@ -18,6 +18,7 @@ import '@angularclass/request-idle-callback';
 
 // RxJS
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/find';
 import 'rxjs/add/operator/filter';

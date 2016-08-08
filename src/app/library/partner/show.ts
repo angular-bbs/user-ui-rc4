@@ -23,7 +23,7 @@ export class PartnerShow extends BasePage {
   item: Observable<Partner>;
 
   reload(params): void {
-    this.item = this.api.items
+    this.item = this.api.query()
       .find(matchById(params.id));
   }
 }

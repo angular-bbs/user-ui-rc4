@@ -22,7 +22,7 @@ export class ArticleHome extends BasePage {
   items: Observable<Article[]>;
 
   reload(params): void {
-    this.items = this.api.items
+    this.items = this.api.query()
       .filter(matchByAuthor(params.author))
       .filter(matchByTag(params.tag))
       .filter(matchByColumn(params.column))

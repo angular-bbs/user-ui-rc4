@@ -14,5 +14,7 @@ const items: Partner[] = [
 
 @Injectable()
 export class PartnerApi {
-  items: Observable<Partner> = Observable.from(items);
+  query(params = {}): Observable<Partner> {
+    return Observable.from(items);
+  }
 }

@@ -24,7 +24,7 @@ export class AuthorHome extends BasePage {
   items: Observable<MenuItem[]>;
 
   reload(params):void {
-    this.items = this.api.items
+    this.items = this.api.query()
       .find(matchById(params.id))
       .map(authorToMenuItem)
       .toArray();

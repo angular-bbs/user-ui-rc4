@@ -16,5 +16,7 @@ const items: Article[] = [
 
 @Injectable()
 export class NewsApi {
-  items: Observable<Article> = Observable.from(items);
+  query(params = {}): Observable<Article> {
+    return Observable.from(items);
+  }
 }

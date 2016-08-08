@@ -24,7 +24,7 @@ export class ColumnHome extends BasePage {
   items: Observable<MenuItem[]>;
 
   reload(params) {
-    this.items = this.api.items
+    this.items = this.api.query()
       .find(matchById(params.id))
       .map(columnToMenu)
       .toArray();

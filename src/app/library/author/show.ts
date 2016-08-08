@@ -23,7 +23,7 @@ export class AuthorShow extends BasePage {
   item: Observable<Author>;
 
   reload(params) {
-    this.item = this.api.items
+    this.item = this.api.query()
       .find(matchById(params.id));
   }
 }

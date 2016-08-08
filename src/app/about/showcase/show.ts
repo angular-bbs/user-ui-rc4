@@ -23,7 +23,7 @@ export class ShowcaseShow extends BasePage {
   item: Observable<Showcase>;
 
   reload(params): void {
-    this.item = this.api.items
+    this.item = this.api.query()
       .find(matchById(params.id));
   }
 }

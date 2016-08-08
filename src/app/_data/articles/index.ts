@@ -68,5 +68,7 @@ const items: Article[] = [
 
 @Injectable()
 export class ArticleApi {
-  items: Observable<Article> = Observable.from(items).filter((item)=>!item.hidden);
+  query(params = {}): Observable<Article> {
+    return Observable.from(items).filter((item)=>!item.hidden);
+  }
 }

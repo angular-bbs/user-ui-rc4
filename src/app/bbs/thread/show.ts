@@ -6,6 +6,7 @@ import { BasePage } from "../../_common/components/base/page";
 import { Observable } from "rxjs/Observable";
 import { ThreadDetails } from "./details";
 import { matchById } from "../../_common/operators/match-by-id";
+import { BbsLayoutNav } from "../_layout/nav";
 
 @Component({
   selector: 'thread-show',
@@ -13,7 +14,7 @@ import { matchById } from "../../_common/operators/match-by-id";
   styles: [
     require('./show.scss')
   ],
-  directives: [ThreadDetails]
+  directives: [ThreadDetails, BbsLayoutNav]
 })
 export class ThreadShow extends BasePage {
   constructor(private api: ThreadApi, activatedRoute: ActivatedRoute) {
@@ -23,7 +24,7 @@ export class ThreadShow extends BasePage {
   item: Observable<Thread>;
 
   reload(params) {
-    this.item = this.api.items
+    this.item = this.api.query()
       .find(matchById(params.id));
   }
 }

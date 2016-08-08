@@ -5,6 +5,7 @@ import { Observable } from "rxjs/Observable";
 import { ThreadList } from "../thread/list";
 import { ThreadApi } from "../../_data/threads/index";
 import { Thread } from "../../_common/models/thread";
+import { BbsLayoutNav } from "../_layout/nav";
 
 @Component({
   selector: 'bbs-mine',
@@ -12,7 +13,7 @@ import { Thread } from "../../_common/models/thread";
   styles: [
     require('./home.scss')
   ],
-  directives: [ThreadList]
+  directives: [ThreadList, BbsLayoutNav]
 })
 export class BbsMine extends BasePage {
   constructor(activatedRoute: ActivatedRoute, private api: ThreadApi) {
@@ -22,7 +23,7 @@ export class BbsMine extends BasePage {
   items: Observable<Thread[]>;
 
   reload(params): void {
-    this.items = this.api.items
+    this.items = this.api.query()
       .filter(matchByAuthor('雪狼'))
       .toArray();
   }
