@@ -9,12 +9,6 @@
   padding: 0.5rem 0.75rem;
   border-left: none;
   border-right: none;
-  &:first-child {
-    border-top: none;
-  }
-  &:last-child {
-    border-bottom: none;
-  }
 }
 
 .media-right {
@@ -29,4 +23,8 @@
 p {
   font-size: 0.9rem;
   color: $text-muted;
+}
+
+.icon {
+  font-size: 1.5rem;
 }

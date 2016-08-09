@@ -50,11 +50,26 @@ ul {
       text-align: center;
       cursor: default;
       &.active {
-        color: $brand-inverse;
+        color: $brand-secondary;
         background: none;
-        border-bottom: 2px solid $brand-inverse;
+        border-bottom: 2px solid $brand-secondary;
         border-radius: 0;
       }
     }
+  }
+}
+
+.sticky {
+  position: fixed !important;
+  &.sticky-bottom-right {
+    bottom: 1em;
+    right: 1em;
+  }
+}
+
+.btn {
+  &.btn-secondary {
+    background: $brand-secondary;
+    color: $gray-lightest;
   }
 }

@@ -29,7 +29,7 @@ export class UserHome implements OnInit, OnDestroy {
       if (decodeURIComponent(state) !== this.auth.csrfToken) {
         alert('安全码不匹配，请联系管理员！');
       } else {
-        this.http.post('/api/home-from-github', {
+        this.http.post('/api/github/user', {
           state: state,
           code: code,
           redirect_url: this.router.serializeUrl(this.router.createUrlTree(['/bbs/user/home']))

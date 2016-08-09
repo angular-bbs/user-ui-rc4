@@ -1,17 +1,3 @@
-@import "../../_common/styles/common";
-
 :host {
   display: block;
-}
-
-.title {
-  color: $brand-inverse;
-  margin-bottom: 1rem;
-}
-
-.summary {
-  border-left: 2px solid $brand-primary;
-  color: $gray-light;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
 }
