@@ -58,8 +58,7 @@ module.exports = {
     'polyfills': './src/polyfills.browser.ts',
     'vendor': './src/vendor.browser.ts',
     'main': './src/main.browser.ts',
-    'data': './src/data.ts'
-
+    'data': './src/data.ts',
   },
 
   /*
